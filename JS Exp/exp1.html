@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register click events by class</h1>
+    <div class="cat">Leopard</div>
+    <div class="cat">Tiger</div>
+    <div class="cat">Lion</div>
+
+    <script>
+        const cats = document.querySelectorAll(".cat")
+        for ( let cat of cats){
+            cat.onclick = changeText ;
+        } 
+        function changeText(){
+            this.innerText = "changed";
+        }
+    </script>
+
+<!--     How to convert a date to a string   -->    
+    <script>
+        const date = new Date();
+        console.log (date);
+
+        const options ={
+            weekday:"long",
+            month:"long",
+            year:"numeric",
+            day:"numeric"
+        };
+
+        let now = date.toLocaleDateString("en",options);
+        let arabicdate = date.toLocaleDateString("ar",options);
+
+        console.log(now);
+        console.log(arabicdate);
+        
+
+    </script>
+
+<!-- How to convert string to array and array to string  -->
+    <script>
+        const names = ["Adam","Eve","John"];
+
+        const str = names.toString();
+        console.log(str);
+
+        //back to array
+        const arr = str.split(",");
+        console.log(arr);
+
+        const joined = arr.join();
+        console.log(joined);
+
+        console.log(names.join(" * "));
+
+        //How to set a time delay 
+        setTimeout(() => console.log(1),3000);
+    </script>
+</body>
+</html>

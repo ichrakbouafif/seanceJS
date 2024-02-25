@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ height: 3000px ;}
+        .one{background-color: beige;transition: all 3s;}
+        .two{background-color:blueviolet ;transition: all 3s;}
+        .three{background-color:coral ;transition: all 3s;}
+        .four{background-color:cornflowerblue ;transition: all 3s;}
+        .five{background-color:darkgoldenrod ;transition: all 3s;} 
+    </style>
+</head>
+<body class="one">
+    <h1>Challenge 30</h1>
+    <p>Press the B key to turn the page beige </p>
+    <p>Press the V key to turn the page blueviolet</p>
+    <p>Press the C key to turn the page coral</p>
+    <p>Press the F key to turn the page cornflowerblue</p>
+    <p>Press the G key to turn the page darkgoldenrod</p>
+
+    <script>
+        var myBody = document.querySelector('body');
+        document.addEventListener('keydown',function(event){
+            var K = event.key.toLocaleUpperCase();
+            switch(K){
+                case "B": myBody.className="one" ;break;
+                case "V": myBody.className="two" ;break;
+                case "C": myBody.className="three" ;break;
+                case "F": myBody.className="four" ;break;
+                case "G": myBody.className= "five";break;
+                default :alert('you pressed the wrong key');
+            }
+        });
+    </script>
+</body>
+</html>

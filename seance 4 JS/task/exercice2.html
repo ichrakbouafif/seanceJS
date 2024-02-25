@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const str1 ='ahmed&ferah-moez&saadi-fadhel&gadihi';
+    function formattoarray(str1){
+        let array=[];
+        let splitsrt1 =str1.split("-").join("&").split("&");
+        console.log(splitsrt1);
+        
+        for(let j=0;j< (splitsrt1 -1) ;j=j+2){
+            array[j].firstname = splitsrt1[j];
+            array[j].lastname = splitsrt1[j+1];
+        }
+        return array;
+    }
+    array= formattoarray(str1);
+    console.log(array);
+
+</script>
+</html>

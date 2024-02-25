@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        TAX <input type="number" id="textTax">
+        <div id="divBalance"></div>
+    </div>
+    <script>
+        const Expences = [13,1021,22];
+        const Income = 11234;
+
+        textTax.oninput = showBalance;
+        function showBalance(){
+            const Balance = Expences.reduce(extraction , Income);
+            divBalance.innerText = ` Balance : ${Balance}`;
+        }
+        function extraction(result,currentVal){
+            const Tax = textTax.value;
+            return(result -(currentVal +currentVal*Tax) ); 
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script Bqasic Challenges</h1>
+    <h2>Challenge 1</h2>
+    <script>
+        // challenge 1
+        var firstname = 'Ichrak';
+        var lastname = 'Bouafif';
+        console.log(firstname);
+        console.log(lastname);
+
+        //challenge 2
+        var fullname = firstname+' '+lastname;
+        console.log(fullname);
+
+        //challenge 3
+        var adjective = 'smart';
+        console.log (`I know that ${fullname} is ${adjective}`);
+
+        //challenge 4
+       // var name = prompt ("What's your name ? ","");
+       // console.log(`Hello ${name}, and welcome! `);
+
+        //challenge 5 & 6 & 7 & 8
+        var number = prompt("Enter a number ","");
+        if (number < 10){
+            console.log("You entred a number smaller than 10");
+            for (var i = 0; i<10;i++){
+                if (number == i){
+                    console.log(`Here is a ${i} <-- this is the number !`);
+                }
+                else {
+                    console.log(`Here is a ${i}`);
+                }
+            }
+        }
+        else if(number > 9) {
+            console.log("You entred a big number ");
+        }
+        else {
+            console.log("ERROR: you didn't enter a number");
+        }
+    </script>
+</body>
+</html>

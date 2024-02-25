@@ -1,0 +1,66 @@
+/* CSS for calculator */
+
+body {
+    background-color: #f9d3d3;
+    background-image: linear-gradient(to bottom right, #f9d3d3, #f0b7b7);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  }
+  
+  .display {
+    margin-bottom: 10px;
+  }
+  
+  input[type="button"] {
+    background-color: #f17eb8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #e654a4;
+  }
+  
+  .operator {
+    background-color: #f389c2;
+  }
+  
+  .operator:hover {
+    background-color: #e55a9e;
+  }
+  
+  .equal {
+    background-color: #3dc3cf;
+  }
+  
+  .equal:hover {
+    background-color: #32a6aa;
+  }
+  
+  input[type="text"] {
+    background-color: #f5d5d5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: right;
+    width: 100%;
+  }
+  

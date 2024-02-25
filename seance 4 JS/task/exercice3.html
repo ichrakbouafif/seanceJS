@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const users = [
+{ name : "sarah" , comment : "j'aime ce poste <3" },
+{ name : "monya" , comment : "le poste est null :( " },
+{ name : "carlos" , comment : "salut l'algérie" }
+]
+function mooddetect( users ) {
+    var arr=[]
+    for (let i = 0; i < users.length; i++){
+        arr[i]=users.comment;
+    }
+    for (let i = 0; i < arr.length; i++){
+        if (arr.includes("<3")){
+            users[i].delete(comment);
+            users[i].etat="heureux";
+        }
+        else if (arr.includes(":(")) {
+            users[i].delete(comment);
+            users[i].etat="triste";
+        }
+        else {
+           // users[i].delete(comment);
+            users[i].etat="neutre";
+        }
+
+    }
+    return (users);
+}
+mooddetect( users );
+console.log(users);
+</script>
+</html>

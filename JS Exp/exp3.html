@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Predict the nationality of a name </h1>
+    <input id="textName">
+    <input type="button" id="btnfind" value="find">
+    <div id="divResult"></div>
+
+    <script>
+        btnfind.onclick = findName;
+
+        function findName(){
+            fetch("https://api.nationalize.io/"
+            + "?name=" +textName.value)
+            .then(response => response.json())
+            .then (data => showResult(data) );
+        }
+        function showResult (data){
+            const countries = data.country;
+            let ol = document.createElement("ol");
+            for (let country of countries){
+                let li = document.createElement("li");
+                li.innerText = regionName.of(country.country_id);
+                ol.appendChild(li);
+            }
+            divResult.innerHTML = "";
+            divResult.append(ol);
+        }
+        const regionName = new Intl.DisplayNames(['en'],{ type: 'region'});
+    </script>
+</body>
+</html>
